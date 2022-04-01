@@ -26,7 +26,7 @@ gpt.add_example(Example("Get all details of the Workers whose SALARY lies betwee
 gpt.add_example(Example("Get Salary details of the Workers",
                         "Select Salary from Worker"))
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route('/get_code', methods=['POST'])
 def find_answer():
@@ -38,5 +38,5 @@ def find_answer():
     resp.status_code = 400
     return resp
 
-if _name=='main_':
-    app.run(debug=True, port=5000, host='0.0.0.0')
+if __name__=='__main__':
+    app.run(debug=True)
