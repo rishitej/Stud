@@ -39,4 +39,4 @@ def find_answer():
     return resp
 
 if _name=='main_':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
